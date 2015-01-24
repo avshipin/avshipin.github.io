@@ -1,0 +1,47 @@
+function count_a(a_num){
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = 'http://tj.h6nq.com/count.php?action=in_a&ctid=1&a_num=' + a_num + '&Ip=27.30.72.228';
+	document.getElementsByTagName("head")[0].appendChild(script);
+	return true;
+}
+
+var url = "http://pv.sohu.com/cityjson?ie=utf-8&_=" + Math.random();
+var headID = document.getElementsByTagName("head")[0];
+var script = document.createElement('script');
+script.type='text/javascript';
+script.src=url;
+function hjaaCallback(){
+	var comefrom = encodeURIComponent(document.referrer);
+	
+	var hjaacolor = 0;
+	if(navigator.appName == "Netscape"){
+		hjaacolor = screen.pixelDepth;
+	}else{
+		hjaacolor = screen.colorDepth;
+	}
+	
+	var ip =  returnCitySN.cip;
+
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = 'http://tj.h6nq.com/count.php?action=in&ctid=1&url=' + comefrom + '&Ip=' + ip + '&Isp=' + encodeURIComponent(returnCitySN.cname) + '&tcolor=' + hjaacolor + '&ssize=' + screen.width + ',' + screen.height;
+	document.getElementsByTagName("head")[0].appendChild(script);
+}
+if(window.addEventListener){
+	script.onload=function(){
+		hjaaCallback();
+	}
+}else{
+	 ieLoadBugFix(script, function(){
+	     hjaaCallback();}
+	 );
+}
+function ieLoadBugFix(scriptElement, callback){
+	if(scriptElement.readyState=='loaded' || scriptElement.readyState=='completed'){
+		callback();
+	}else{
+		setTimeout(function(){ieLoadBugFix(scriptElement, callback); }, 100);
+	}
+}
+headID.appendChild(script);
