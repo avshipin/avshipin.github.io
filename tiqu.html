@@ -1,0 +1,67 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312 " />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>闪点卡密提取系统</title>
+<link rel="stylesheet" type="text/css" href="http://tiqu.shandiankami.com/Css/Global.css" />
+<script language="javascript">
+function checkform(kill)
+{	
+
+if(kill("Title_names").value=="请输入订单编号"){
+
+	alert("对不起,订单号不能为空！");
+
+	kill("Title_names").focus();
+
+	return false;}
+
+	if(kill("wangwang").value=="请输入旺旺名"){
+
+	alert("对不起,旺旺不能为空！");
+
+	kill("wangwang").focus();
+
+	return false;}
+	
+}
+
+</script>
+</head>
+<body>
+<div class="auto">
+  <div class="navTop widthFloat">
+    <div class="logo"><img src="http://tiqu.shandiankami.com/Images/Logo.jpg" alt="" height="40" width="270" /></div>
+    <div class="text bgf"><b><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E6%8F%90%E5%8D%A1%E6%9C%BA%E5%99%A8%E4%BA%BA01&siteid=cntaobao&status=2&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E6%8F%90%E5%8D%A1%E6%9C%BA%E5%99%A8%E4%BA%BA01&site=cntaobao&s=2&charset=utf-8" alt="点击这里给我发消息" /></a><a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E6%8F%90%E5%8D%A1%E6%9C%BA%E5%99%A8%E4%BA%BA04&siteid=cntaobao&status=2&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E6%8F%90%E5%8D%A1%E6%9C%BA%E5%99%A8%E4%BA%BA04&site=cntaobao&s=2&charset=utf-8" alt="点击这里给我发消息" /></a>亲~点我提卡</b></div>
+  </div>
+  <div class="main">
+		<form align="center" method="post" name="kill" action="result.php" onSubmit="return checkform(kill);">
+			<input type="text" name="Title_names" value="请输入订单编号" class="input_01" onfocus="if (value =='请输入订单编号'){value ='';this.style.color='#000';}" onblur="if (value ==''){value='请输入订单编号';this.style.color='#999';}" />
+			<input type="text" name="wangwang" value="请输入买家旺旺名" class="input_02" onfocus="if (value =='请输入买家旺旺名'){value ='';this.style.color='#000';}" onblur="if (value ==''){value='请输入买家旺旺名';this.style.color='#999';}" />
+			<input type="submit" name="submit" value=""  class="input_03" />
+		</form>
+  </div>
+	<div class="process widthFloat">
+		<ul>
+			<li class="li_01">
+				<h4>1.输入订单编号</h4>
+				<p>提示：已买到宝贝，可查询订单编号 <a href="http://tiqu.shandiankami.com/help.html">[演示]</a></p>
+			</li>
+			<li class="li_02">
+				<h4>2.输入旺旺名</h4>
+				<p>提示：淘宝会员名/旺旺会员名均可</p>
+			</li>
+			<li class="li_03">
+				<h4>成功查看</h4>
+				<p>本站仅提供暂存，卡密本身问题请联系卖家</p>
+			</li>
+		</ul>
+	</div>
+	<div class="copy widthFloat">Copyright<span>&copy;</span>2012-2013&nbsp;www.shandiankami.com&nbsp;版权所有&nbsp;<script src="http://s22.cnzz.com/stat.php?id=4132008&web_id=4132008" language="JavaScript"></script></div>
+</div>
+</body>
+</html>
